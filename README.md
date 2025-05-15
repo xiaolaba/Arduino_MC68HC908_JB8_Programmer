@@ -1,8 +1,8 @@
 # xiaolaba testing, not working, did not know why.
-WhatsApp_Image_2025-05-15_at_18.39.26.jpg  
-MC68HC908JB8-ADW28_pin_SOIC.JPG  
-Arduino_HC908JB8_programmer_sch.jpg  
-srecToProgrammer.exe  
+![xiaolaba_testing_NG\WhatsApp_Image_2025-05-15_at_18.39.26.jpg](xiaolaba_testing_NG\WhatsApp_Image_2025-05-15_at_18.39.26.jpg)  
+![xiaolaba_testing_NG\MC68HC908JB8-ADW28_pin_SOIC.JPG](xiaolaba_testing_NG\MC68HC908JB8-ADW28_pin_SOIC.JPG)  
+![xiaolaba_testing_NG\Arduino_HC908JB8_programmer_sch.jpg](xiaolaba_testing_NG\Arduino_HC908JB8_programmer_sch.jpg)  
+![xiaolaba_testing_NG\srecToProgrammer.exe](xiaolaba_testing_NG\srecToProgrammer.exe)  
 
 
 
