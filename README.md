@@ -1,3 +1,11 @@
+# xiaolaba testing, not working, did not know why.
+WhatsApp_Image_2025-05-15_at_18.39.26.jpg  
+MC68HC908JB8-ADW28_pin_SOIC.JPG  
+Arduino_HC908JB8_programmer_sch.jpg  
+srecToProgrammer.exe  
+
+
+
 # Using the Programmer.
 - First, flash the Arduino programmer in firmware_arduino to an Arduino Uno / Duemilanove.
 - Place a HC908 on a breadboard and wire it up as shown in the table in the **How it Works** section.
