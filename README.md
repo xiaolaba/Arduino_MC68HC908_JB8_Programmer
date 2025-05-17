@@ -39,6 +39,8 @@ With PTA3 set to zero, the communications baudrate will be slightly higher than 
 With some experimentation, the best clock obtainable was 3.125MHz. This means care needs to be taken with serial code as timings will be off a bit.
 After experimentation, timings for bit durations were obtained  so the correct bit-rates can be used during programming.
 
+### MC68HC908JB8-JP or JDW, 20pin DIP / SOIC
+
 |Arduino	|HC908	|HC908	|Arduino|
 | ---------:| ----- | -----:| ----- |
 |	GND		|Vss 	|~RST	|D6 (10K pullup to Vdd)|
@@ -48,7 +50,7 @@ After experimentation, timings for bit durations were obtained  so the correct b
 |	+5V		|Vdd	|PTA3	|D2|
 |			|PTD0	|PTA4||
 |			|PTE1	|PTA5||
-|			|PTR3	|PTA6||
+|			|PTE3	|PTA6||
 |			|PTE4	|PTA7||
 |			|PTC0	|~IRQ	|7V (via 2K4 - 3K6 divider between 12V and GND)|
 
