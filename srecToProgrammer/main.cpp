@@ -1,7 +1,21 @@
 #include <iostream>
 #include <stdint.h>
-#include <Windows.h>
+
+#include <Windows.h>	// if this line highlighted as error  
+// win10, visual studio community 2017  
+// Open the project properties  
+// Into General-- > SDK Version  
+// I just picked the 10.0.17763.0 version instead of 10.0  
+
+// 嚴重性	程式碼	說明	專案	檔案	行	隱藏項目狀態  
+// 錯誤	MSB8020	找不到 v142 的建置工具(平台工具集 = 'v142')。若要使用 v142 建置工具進行建置，  
+// 請安裝 v142 建置工具。或者，您可以選取[專案] 功能表，或在方案上按一下滑鼠右鍵，  
+// 然後選取[重定方案目標]，升級成最新版的 Visual Studio 工具。srecToProgrammer  
+// C : \Program Files(x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets	67
+// // Visual Studio 2017 (v141), select mine
+
 #include "Serial.h"
+#include <vector>  // For std::vector, xiaolaba
 
 
 uint8_t gMemory[ 65536 ];
@@ -268,15 +282,16 @@ void ProcessByte( unsigned char b )
 int main( int argc, char* argv[] )
 {
 	std::vector<Serial::PortAvail> ports;
+
+	//// show how many COM port of Windows OS
 	gSerial.Enum( ports );
 	for( size_t i = 0; i < ports.size(); ++i )
 	{
 		printf( "COM%d %s\n", ports[ i ].port, ports[ i ].busy ? "BUSY" : "available" );
 	}
 
-
 	int portIdx = 0;
-	if( ports.size() == 1 )
+	if( ports.size() == 1 )	// single COM port found
 	{
 		portIdx = ports[ 0 ].port;
 	}
@@ -285,11 +300,16 @@ int main( int argc, char* argv[] )
 		portIdx = atoi( argv[ 2 ] );
 	}
 
+	printf("ports.size() = %d\n", ports.size() );
+	printf("portIdx = %d\n", portIdx);
 
+	// argv[ 1 ] = *.S19  
+	// argv[ 2 ] = comport_index  
+	printf("Run srecToProgrammer <srec_file> <comport_index> to send the data to HC908 via the Arduino");  
+	
 	if( gSerial.Open( portIdx, 250000, Serial::Parity::None, Serial::StopBits::StopBits_2 ) )
 	{
 		memset( gMemory, 0xFF, sizeof( gMemory ) );
-
 
 		FILE* f = nullptr;
 		const char* path = argv[ 1 ];
